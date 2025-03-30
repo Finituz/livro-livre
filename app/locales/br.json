@@ -1,0 +1,50 @@
+{
+  "Header": {
+    "select::languages": { "en": "Inglês", "br": "Português" },
+    "text::library": "Biblioteca",
+    "placeholder::search": "Pesquisar livro...",
+    "title::syncLibrary": "Sincronizar biblioteca",
+    "title::howToUse": "Como usar?",
+    "title::changeLanguage": "Mudar idioma",
+    "title::whatsNew": "O que há de novo (Changelog)",
+    "title::signIn": "Entrar",
+    "title::signOut": "Sair",
+    "title::logged": "Conectado como {account}",
+    "title::deleteFromCloud": "Remover da nuvem"
+  },
+
+  "Library": {
+    "library": "Biblioteca",
+    "message::login": "Por favor, faça login para acessar sua biblioteca!",
+    "message::addNewBook": "Adicione um novo livro para começar",
+    "message::bookNotFound": "Não conseguimos encontrar o termo \"{searchValue}\" na sua biblioteca!"
+  },
+
+  "Card": {
+    "title::lastOpened": "Último livro aberto",
+    "message::loadingCover": "Carregando capa...",
+    "message::download": "Baixar livro para meu dispositivo",
+    "message::favorite": "Remover livro dos favoritos",
+    "message::notFavorite": "Adicionar livro aos favoritos",
+    "message::delete": "Excluir livro da biblioteca"
+  },
+
+  "NewBookForm": {
+    "title::form": "Adicionando novo livro!",
+    "button::addNewBook": "Adicionar novo livro",
+    "label::book::title": "Título do livro",
+    "placeholder::book::title": "adicione o nome do livro...",
+    "label::book::author": "Nome do autor",
+    "placeholder::book::author": "digite o nome do autor",
+    "label::book::releaseDate": "Data de lançamento",
+    "label::book::addTags": "Adicione tags!",
+    "placeholder::book::addTags": "escreva as tags separadas por espaço...",
+    "label::book::cover": "Capa do livro",
+    "label::book::file": "Arquivo do livro",
+    "button::form::addToLibrary": "Adicionar à biblioteca!"
+  },
+
+  "LibraryFilters": {},
+
+  "Notifications": {}
+}

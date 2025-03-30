@@ -1,0 +1,100 @@
+{
+  "Header": {
+    "select::languages": { "en": "English", "br": "Portuguese" },
+    "text::library": "Library",
+    "placeholder::search": "Search book...",
+    "title::syncLibrary": "Sync library",
+    "title::howToUse": "How to use it?",
+    "title::changeLanguage": "Change language",
+    "title::whatsNew": "What's new (Changelog)",
+    "title::signIn": "Sign In",
+    "title::signOut": "Sign Out",
+    "title::logged": "Connected as {account}",
+    "title::deleteFromCloud": "Remove from cloud"
+  },
+
+  "Library": {
+    "library": "Library",
+    "message::login": "Please, login to access your library!",
+    "message::addNewBook": "Add a new book to start",
+    "message::bookNotFound": "Couldn't found term \"{searchValue}\" in your library!"
+  },
+
+  "Card": {
+    "title::lastOpened": "Last Book opened",
+    "message::loadingCover": "Loading cover...",
+    "message::download": "Download book to my device",
+    "message::favorite": "Remove book from favorites",
+    "message::notFavorite": "Add book from favorites",
+
+    "Delete": {
+      "message::delete": "Delete book from library",
+      "title::modal::delete": "Remove {title} permanently?",
+      "message::modal::delete": "Are you sure that you want to delete {title} book? This is irreversible.",
+      "option::modal::yes": "yes, I'm sure.",
+      "option::modal::no": "no, I'm not."
+    }
+  },
+
+  "NewBookForm": {
+    "title::form": "Adding new book!",
+    "button::addNewBook": "Add new book",
+    "label::book::title": "Book title",
+    "placeholder::book::title": "add book name...",
+    "label::book::author": "Author's name",
+    "placeholder::book::author": "type author's name",
+    "label::book::releaseDate": "Release date",
+    "label::book::addTags": "Add tags!",
+    "placeholder::book::addTags": "write the tags separate by space...",
+    "label::book::cover": "Book's cover",
+    "label::book::file": "Book's file",
+    "button::form::addToLibrary": "Add it to library!"
+  },
+
+  "LibraryFilters": {
+    "title::view::grid": "Shows books as big cards",
+    "title::view::list": "Shows books as a list",
+    "title::view::listIcons": "Shows books as a list but with books cover",
+    "title::order::ascendent": "Shows books from A to z alphabetcally",
+    "title::order::decrescent": "Shows books from Z to a alphabetcally",
+    "title::order::favorites": "Shows books from favorites first",
+    "title::order::tag": "Shows books that only have specified tags",
+    "placeholder::search::order::tag": "Search for tag...",
+    "message::cantFind::order::tag": "Can't find {value} tag"
+  },
+
+  "Listview": {
+    "title::cover": "Cover",
+    "title::bookTitle": "Book title",
+    "title::releaseDate": "Release date",
+    "title::author": "Author"
+  },
+
+  "PdfViewer": {
+    "Dock": {
+      "pagesView": "{current} of {total} pages",
+      "button::library": "Library",
+      "button::previous": "Previous",
+      "button::next": "Next",
+      "title::scale": "Scale",
+      "title::theme": "theme",
+      "title::draw": "Draw"
+    },
+    "AnnotationDock": {
+      "title::pencil": "Pencil",
+      "title::marker": "marker",
+      "title::triangle": "Triangle",
+      "title::rectangle": "Rectangle",
+      "title::circle": "Circle",
+      "title::arrow": "Arrow",
+      "title::eraser": "Eraser",
+      "title::clearCanvas": "Clear Annotations",
+      "title::opacity": "Opacity",
+      "title::color": "Color"
+    }
+  },
+
+  "Notifications": {
+    "LibraryRefreshed": {}
+  }
+}
