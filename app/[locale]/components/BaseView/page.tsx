@@ -1,3 +1,4 @@
+"use client";
 import { ReactElement, RefObject, useRef, useState } from "react";
 import { dataMapType } from "../../types";
 import { setCloudMetadata, useReload } from "../../utils";
