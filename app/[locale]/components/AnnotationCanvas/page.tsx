@@ -28,7 +28,7 @@ interface AnnotationCanvasProps {
   showAnnotation: boolean;
 }
 
-export default function AnnotationCanvas({
+function AnnotationCanvas({
   bookIndex,
   mouseDown,
   setMouseDown,
@@ -41,7 +41,6 @@ export default function AnnotationCanvas({
   const prevPoint = useRef<{ x: number; y: number } | null>(null);
 
   const snapshot = useRef<ImageData>(null);
-  const [load, setLoad] = useState(false);
 
   const mousePosition = useMousePosition();
 
@@ -173,3 +172,5 @@ export default function AnnotationCanvas({
     ></canvas>
   );
 }
+
+export default AnnotationCanvas;
