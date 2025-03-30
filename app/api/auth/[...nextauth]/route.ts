@@ -4,8 +4,8 @@ import Google from "next-auth/providers/google";
 export const handler = NextAuth({
   providers: [
     Google({
-      clientId: process.env.AUTH_GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.AUTH_GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
       authorization: {
         params: {
           scope:
