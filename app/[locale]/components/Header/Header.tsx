@@ -6,13 +6,13 @@ import {
   RiRefreshLine,
   RiSearchLine,
 } from "react-icons/ri";
-import SignInGoogle from "../signInGoogle/page";
+import SignInGoogle from "../SignInGoogle/SignInGoogle";
 import { setDataMapIfExistsInCloud } from "../../googleAPI";
 import { identifierCode } from "@/app/[locale]/utils";
 import { useEffect, useRef } from "react";
-import Modal from "../Modal/page";
+import Modal from "../Modal/Modal";
 import { useSession } from "next-auth/react";
-import ChangeLanguage from "../changeLanguage/page";
+import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 import { useTranslations } from "next-intl";
 
 export default function Header({

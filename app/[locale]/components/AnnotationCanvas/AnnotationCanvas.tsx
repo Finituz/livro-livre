@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef } from "react";
 import { Tools, themeType } from "../../types";
 
 import { rgbToHex, useMousePosition } from "../../utils";
@@ -18,17 +18,7 @@ import { setStorageSnapshotAnnotation } from "./saveSystem/setStorageSnapshotAnn
 import { arrow } from "./shapes/arrow";
 import { removeCanvas } from "./saveSystem/removeCanvas";
 
-interface AnnotationCanvasProps {
-  bookIndex: number;
-  currentPage: number;
-  mouseDown: boolean;
-  setMouseDown: Function;
-  color: themeType;
-  tool: Tools | null;
-  showAnnotation: boolean;
-}
-
-function AnnotationCanvas({
+export default function AnnotationCanvas({
   bookIndex,
   mouseDown,
   setMouseDown,
@@ -36,7 +26,15 @@ function AnnotationCanvas({
   currentPage,
   tool,
   showAnnotation,
-}: AnnotationCanvasProps) {
+}: {
+  bookIndex: number;
+  mouseDown: boolean;
+  setMouseDown: Function;
+  color: themeType;
+  currentPage: number;
+  tool: Tools;
+  showAnnotation: boolean;
+}): ReactElement {
   const initPos = useRef<{ x: number; y: number } | null>(null);
   const prevPoint = useRef<{ x: number; y: number } | null>(null);
 
@@ -46,7 +44,6 @@ function AnnotationCanvas({
 
   const annotationCanvasRef = useRef<HTMLCanvasElement>(null);
   const canvas = annotationCanvasRef.current;
-  const ctx = canvas?.getContext("2d");
 
   const draw = (
     ctx: CanvasRenderingContext2D,
@@ -102,6 +99,7 @@ function AnnotationCanvas({
   };
 
   const handlerMouseDown = () => {
+    const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
 
     initPos.current = { x: mousePosition.x ?? 0, y: mousePosition.y ?? 0 };
@@ -124,6 +122,7 @@ function AnnotationCanvas({
   };
 
   const handler = () => {
+    const ctx = canvas?.getContext("2d");
     if (!ctx || !mouseDown || !showAnnotation || !snapshot.current) return;
 
     ctx.putImageData(snapshot.current, 0, 0);
@@ -140,12 +139,14 @@ function AnnotationCanvas({
 
   // the follow lines are the reason for me to regret being a dev :/
   const redraw = () => {
+    const ctx = canvas?.getContext("2d");
     if (!ctx || !canvas) return;
     clearCanvas(canvas, ctx);
     setStorageSnapshotAnnotation(bookIndex, currentPage, ctx);
   };
 
   useEffect(() => {
+    const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx || tool != Tools.CLEAR_CANVAS) return;
 
     clearCanvas(canvas, ctx);
@@ -159,18 +160,18 @@ function AnnotationCanvas({
   });
 
   return (
-    <canvas
-      onLoad={redraw}
-      onMouseDown={handlerMouseDown}
-      onMouseUp={handlerMouseUp}
-      onMouseMove={handler}
-      onResize={handlerResizeWindow}
-      className="absolute z-2 top-[0px] left-[0px] bottom-[0px] right-[0px] w-full h-full"
-      width={window.innerWidth}
-      height={window.innerHeight}
-      ref={annotationCanvasRef}
-    ></canvas>
+    <>
+      <canvas
+        onLoad={redraw}
+        onMouseDown={handlerMouseDown}
+        onMouseUp={handlerMouseUp}
+        onMouseMove={handler}
+        onResize={handlerResizeWindow}
+        className="absolute z-2 top-[0px] left-[0px] bottom-[0px] right-[0px] w-full h-full"
+        width={window.innerWidth}
+        height={window.innerHeight}
+        ref={annotationCanvasRef}
+      ></canvas>
+    </>
   );
 }
-
-export default AnnotationCanvas;

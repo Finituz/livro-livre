@@ -1,11 +1,11 @@
 "use client";
 
-import Header from "./components/Header/page";
-import NewBook from "./components/NewBook/page";
-import Library from "./components/Library/page";
-import Notification from "./components/Notification/page";
+import Header from "./components/Header/Header";
+import NewBook from "./components/NewBook/NewBook";
+import Library from "./components/Library/Library";
+import Notification from "./components/Notification/Notification";
 import { useState } from "react";
-import LastOpenedBook from "./components/LastOpenedBook/page";
+import LastOpenedBook from "./components/LastOpenedBook/LastOpenedBook";
 import { useReload } from "./utils";
 
 export default function Home() {

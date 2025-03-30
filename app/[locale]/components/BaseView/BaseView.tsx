@@ -1,9 +1,9 @@
 "use client";
 import { ReactElement, RefObject, useRef, useState } from "react";
 import { dataMapType } from "../../types";
-import { setCloudMetadata, useReload } from "../../utils";
+import { setCloudMetadata } from "../../utils";
 import { redirect } from "next/navigation";
-import Modal from "../Modal/page";
+import Modal from "../Modal/Modal";
 import { deleteFile } from "../../googleAPI";
 
 import {

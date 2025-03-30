@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import { identifierCode, saveFile } from "@/app/[locale]/utils";
 import { downloadFile, setDataMapIfExistsInCloud } from "../../googleAPI";
 import Image from "next/image";
-import SignInGoogle from "../signInGoogle/page";
+import SignInGoogle from "../SignInGoogle/SignInGoogle";
 import { RiLoader4Line } from "react-icons/ri";
 import { useTranslations } from "next-intl";
 import LibraryFilters, {
   sortLibrary,
   visualizationType,
-} from "../LibraryFilters/page";
+} from "../LibraryFilters/LibraryFilters";
 
 export default function Library({
   refreshLibrary,

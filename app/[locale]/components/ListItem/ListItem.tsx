@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import BaseView from "../BaseView/page";
+import BaseView from "../BaseView/BaseView";
 import { useEffect, useRef, useState } from "react";
 import { getAverageRGB, useReload } from "../../utils";
 

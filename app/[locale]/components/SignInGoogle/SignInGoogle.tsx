@@ -3,7 +3,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 import { RiGoogleFill } from "react-icons/ri";
-import DropDown from "../DropDown/page";
+import DropDown from "../DropDown/DropDown";
 
 export default function SignInGoogle() {
   const { data: session } = useSession();

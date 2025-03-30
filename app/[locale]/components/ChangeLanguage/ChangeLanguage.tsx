@@ -5,7 +5,7 @@ import { availableLanguages } from "@/app/i18n/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import DropDown from "../DropDown/page";
+import DropDown from "../DropDown/DropDown";
 
 export default function ChangeLanguage({ title }: { title?: string }) {
   const langButtonRef = useRef<HTMLButtonElement>(null);

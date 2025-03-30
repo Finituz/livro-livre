@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { RiLoader4Line } from "react-icons/ri";
 
 import { useTranslations } from "next-intl";
-import BaseView from "../BaseView/page";
+import BaseView from "../BaseView/BaseView";
 
 export default function Card({
   title,

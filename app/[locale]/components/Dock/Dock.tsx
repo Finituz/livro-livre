@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { dataMapType, themeType, themeColors } from "../../types";
+import { themeType, themeColors } from "../../types";
 import { PDFDocumentProxy } from "pdfjs-dist";
 import { MouseEvent, useEffect, useRef } from "react";
 import {

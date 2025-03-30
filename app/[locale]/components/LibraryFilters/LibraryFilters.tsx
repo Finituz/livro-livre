@@ -12,10 +12,10 @@ import {
   RiSortAlphabetDesc,
   RiStarSLine,
 } from "react-icons/ri";
-import Card from "../Card/page";
-import DropDown from "../DropDown/page";
-import { useFormatter, useTranslations } from "next-intl";
-import ListItem from "../ListItem/page";
+import Card from "../Card/Card";
+import DropDown from "../DropDown/DropDown";
+import { useTranslations } from "next-intl";
+import ListItem from "../ListItem/ListItem";
 
 export const visualizationType = (visual: Visuals, book: bookType) => {
   switch (visual) {

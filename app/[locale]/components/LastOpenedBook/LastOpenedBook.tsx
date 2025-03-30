@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { bookType, dataMapType } from "../../types";
-import Card from "../Card/page";
+import Card from "../Card/Card";
 import { useSession } from "next-auth/react";
 
 export default function LastOpenedBook() {

@@ -5,7 +5,7 @@ import { FormEvent, KeyboardEvent, useRef } from "react";
 import { RiDragDropLine, RiFunctionAddLine } from "react-icons/ri";
 import { identifierCode, setCloudMetadata } from "@/app/[locale]/utils";
 import { createFolder, uploadFile } from "../../googleAPI";
-import Modal from "../Modal/page";
+import Modal from "../Modal/Modal";
 import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 

@@ -6,11 +6,11 @@ import type {
   RenderParameters,
 } from "pdfjs-dist/types/src/display/api";
 import { useCallback, useRef, useState, useEffect } from "react";
-import Dock from "../Dock/page";
+import Dock from "../Dock/Dock";
 import { dataMapType, themeType, Tools } from "../../types";
 
-import AnnotationDock from "../AnnotationDock/page";
-import AnnotationCanvas from "../AnnotationCanvas/page";
+import AnnotationDock from "../AnnotationDock/AnnotationDock";
+import AnnotationCanvas from "../AnnotationCanvas/AnnotationCanvas";
 import { rgbToHex } from "../../utils";
 
 export default function PdfJs({
