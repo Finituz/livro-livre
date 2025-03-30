@@ -1,19 +1,25 @@
-import { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
+const withNextIntl = createNextIntlPlugin("./app/i18n/request.ts");
+
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
   images: {
     unoptimized: true,
+
     remotePatterns: [
       {
         protocol: "https",
+
         hostname: "lh3.googleusercontent.com",
+
         port: "",
+
         pathname: "/",
       },
     ],
   },
 };
 
-const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);
