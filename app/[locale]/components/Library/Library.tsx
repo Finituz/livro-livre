@@ -23,7 +23,6 @@ export default function Library({
   searchValue: string;
 }) {
   const { data: session, status } = useSession();
-
   const t = useTranslations("Library");
 
   const [visual, setVisual] = useState<Visuals>(Visuals.GRID);
