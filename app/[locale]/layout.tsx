@@ -39,9 +39,9 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider>
-          <GoogleSessionProvider>{children}</GoogleSessionProvider>
-        </NextIntlClientProvider>
+        <GoogleSessionProvider>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </GoogleSessionProvider>
       </body>
     </html>
   );
