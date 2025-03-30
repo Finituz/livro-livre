@@ -1,11 +1,11 @@
 import NextAuth, { AuthOptions } from "next-auth";
 import Google from "next-auth/providers/google";
 
-export const authOptions: AuthOptions = {
+export const handler = NextAuth({
   providers: [
     Google({
-      clientId: process.env.AUTH_GOOGLE_CLIENT_ID ?? "",
-      clientSecret: process.env.AUTH_GOOGLE_CLIENT_SECRET ?? "",
+      clientId: process.env.AUTH_GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.AUTH_GOOGLE_CLIENT_SECRET!,
       authorization: {
         params: {
           scope:
@@ -17,5 +17,5 @@ export const authOptions: AuthOptions = {
   session: {
     strategy: "jwt",
   },
-};
-export default NextAuth(authOptions);
+});
+export { handler as GET, handler as POST };
