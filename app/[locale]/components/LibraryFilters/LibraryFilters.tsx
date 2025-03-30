@@ -161,6 +161,8 @@ export default function LibraryFilters({
       localStorage.getItem("dataMap") ?? "null",
     );
 
+    if (!dataMap) return;
+
     let tagSet: Array<string> = [];
 
     dataMap.books.forEach((book) => (tagSet = [...tagSet, ...book.tags]));
