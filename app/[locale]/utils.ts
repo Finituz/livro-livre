@@ -60,8 +60,9 @@ export const saveFile = (filename: string, file: Blob) => {
     "load",
     () => {
       if (!reader.result) return;
+      const result: string = reader.result as string;
       // convert image file to base64 string and save to localStorage
-      localStorage.setItem(filename, reader.result);
+      localStorage.setItem(filename, result);
     },
     false,
   );

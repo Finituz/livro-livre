@@ -39,16 +39,14 @@ export const setDataMapIfExistsInCloud = async (
 };
 
 export const uploadFile = async (
-  file: FormDataEntryValue | FormData,
+  file: FormDataEntryValue,
   parents?: Array<string>,
   isUpdate?: { fileId: string },
 ): Promise<any> => {
   if (!file) return;
 
   const session = await getSession();
-
-  const name: string = file["name" as keyof typeof file];
-
+  const name = "file";
   let updateFileQuery: string = ""; // define query to update a file
   let method = isUpdate ? "PATCH" : "POST";
 
@@ -65,8 +63,6 @@ export const uploadFile = async (
     }),
   );
   body.append("file", file);
-
-  console.log("Body Data: ", body);
 
   if (isUpdate?.fileId) {
     updateFileQuery = `/${isUpdate.fileId}`;

@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import PdfJs from "../components/PDFViewer/page";
+import PdfJs from "../components/PDFViewer/PDFViewer";
 
 export default function Page() {
   const params = useSearchParams();

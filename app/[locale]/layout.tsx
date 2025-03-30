@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import GoogleSessionProvider from "./components/GoogleSessionProvider/page";
-import { NextIntlClientProvider, Locale, hasLocale } from "next-intl";
+import GoogleSessionProvider from "./components/GoogleSessionProvider/GoogleSessionProvider";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/app/i18n/routing";
 
