@@ -18,6 +18,16 @@ import { setStorageSnapshotAnnotation } from "./saveSystem/setStorageSnapshotAnn
 import { arrow } from "./shapes/arrow";
 import { removeCanvas } from "./saveSystem/removeCanvas";
 
+interface AnnotationCanvasProps {
+  bookIndex: number;
+  currentPage: number;
+  mouseDown: boolean;
+  setMouseDown: (value: boolean) => void;
+  color: themeType;
+  tool: Tools | null;
+  showAnnotation: boolean;
+}
+
 export default function AnnotationCanvas({
   bookIndex,
   mouseDown,
@@ -26,15 +36,7 @@ export default function AnnotationCanvas({
   currentPage,
   tool,
   showAnnotation,
-}: {
-  bookIndex: number;
-  currentPage: number;
-  mouseDown: boolean;
-  setMouseDown: Function;
-  color: themeType;
-  tool: Tools | null;
-  showAnnotation: boolean;
-}) {
+}: AnnotationCanvasProps) {
   const initPos = useRef<{ x: number; y: number } | null>(null);
   const prevPoint = useRef<{ x: number; y: number } | null>(null);
 
