@@ -16,7 +16,7 @@ const options: NextAuthOptions = {
       },
     }),
   ],
-
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
     maxAge: 4 * 60 * 60, // 4 hours
@@ -38,10 +38,6 @@ const options: NextAuthOptions = {
       return session;
     },
   },
-  pages: {
-    error: "/auth/error", // Optional: Redirect to a custom error page
-  },
-  debug: process.env.NODE_ENV === "development", // Enable debugging in development environment
 };
 
 const handler = NextAuth(options);
