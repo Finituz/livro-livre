@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import GoogleSessionProvider from "./components/GoogleSessionProvider/GoogleSessionProvider";
+import SessionProvider from "./components/SessionProvider/SessionProvider";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/app/i18n/routing";
@@ -39,9 +39,9 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GoogleSessionProvider>
+        <SessionProvider>
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        </GoogleSessionProvider>
+        </SessionProvider>
       </body>
     </html>
   );
