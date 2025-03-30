@@ -22,7 +22,7 @@ interface AnnotationCanvasProps {
   bookIndex: number;
   currentPage: number;
   mouseDown: boolean;
-  setMouseDown: (value: boolean) => void;
+  setMouseDown: Function;
   color: themeType;
   tool: Tools | null;
   showAnnotation: boolean;
