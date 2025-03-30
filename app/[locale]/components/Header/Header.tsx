@@ -85,7 +85,7 @@ export default function Header({
                 className="w-full"
                 placeholder={t("placeholder::search")}
               />
-              <b className="text-gray-400">{"ctrl+/"}</b>
+              <b className="hidden md:show text-gray-400">{"ctrl+/"}</b>
             </span>
           )}
           <RiMenuLine

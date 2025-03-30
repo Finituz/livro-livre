@@ -164,8 +164,11 @@ export default function AnnotationCanvas({
       <canvas
         onLoad={redraw}
         onMouseDown={handlerMouseDown}
+        onTouchStart={handlerMouseDown}
         onMouseUp={handlerMouseUp}
+        onTouchEnd={handlerMouseUp}
         onMouseMove={handler}
+        onTouchMove={handler}
         onResize={handlerResizeWindow}
         className="absolute z-2 top-[0px] left-[0px] bottom-[0px] right-[0px] w-full h-full"
         width={window.innerWidth}
