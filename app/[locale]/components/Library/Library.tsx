@@ -26,15 +26,8 @@ export default function Library({
 
   const t = useTranslations("Library");
 
-  const [visual, setVisual] = useState<Visuals>(() => {
-    const getVisual: string = localStorage.getItem("visual") ?? "GRID";
-    return Visuals[getVisual as keyof typeof Visuals];
-  });
-
-  const [order, setOrder] = useState<Orders>(() => {
-    const getOrder: string = localStorage.getItem("order") ?? "ASCENDENT";
-    return Orders[getOrder as keyof typeof Orders];
-  });
+  const [visual, setVisual] = useState<Visuals>(Visuals.GRID);
+  const [order, setOrder] = useState<Orders>(Orders.ASCENDENT);
 
   const [tagFilter, setTagFilter] = useState<Array<string>>([]);
 
@@ -67,6 +60,13 @@ export default function Library({
 
   useEffect(() => {
     if (!session) return;
+
+    const getVisual: string | null = localStorage.getItem("visual");
+    const getOrder: string | null = localStorage.getItem("order");
+
+    if (getVisual) setVisual(Visuals[getVisual as keyof typeof Visuals]);
+
+    if (getOrder) setOrder(Orders[getOrder as keyof typeof Orders]);
 
     setDataMapIfExistsInCloud("metadata.json", identifierCode);
 

@@ -55,7 +55,7 @@ export default function Header({
 
   const search = (e: any) => {
     if (!searchInputRef.current) return;
-    console.log(e.code);
+
     if (e.ctrlKey && e.code == "Slash") {
       searchInputRef.current.focus();
       searchInputRef.current.value = "";
