@@ -1,0 +1,100 @@
+{
+  "Header": {
+    "select::languages": { "en": "Inglés", "br": "Portugués", "es": "Español" },
+    "text::library": "Biblioteca",
+    "placeholder::search": "Buscar libro...",
+    "title::syncLibrary": "Sincronizar biblioteca",
+    "title::howToUse": "¿Cómo usarlo?",
+    "title::changeLanguage": "Cambiar idioma",
+    "title::whatsNew": "¿Qué hay de nuevo? (Changelog)",
+    "title::signIn": "Iniciar sesión",
+    "title::signOut": "Cerrar sesión",
+    "title::logged": "Conectado como {account}",
+    "title::deleteFromCloud": "Eliminar de la nube"
+  },
+
+  "Library": {
+    "library": "Biblioteca",
+    "message::login": "¡Por favor, inicia sesión para acceder a tu biblioteca!",
+    "message::addNewBook": "Agrega un nuevo libro para comenzar",
+    "message::bookNotFound": "¡No se pudo encontrar el término \"{searchValue}\" en tu biblioteca!"
+  },
+
+  "Card": {
+    "title::lastOpened": "Último libro abierto",
+    "message::loadingCover": "Cargando portada...",
+    "message::download": "Descargar libro a mi dispositivo",
+    "message::favorite": "Eliminar libro de favoritos",
+    "message::notFavorite": "Agregar libro a favoritos",
+
+    "Delete": {
+      "message::delete": "Eliminar libro de la biblioteca",
+      "title::modal::delete": "¿Eliminar permanentemente {title}?",
+      "message::modal::delete": "¿Estás seguro de que deseas eliminar el libro {title}? Esto es irreversible.",
+      "option::modal::yes": "sí, estoy seguro.",
+      "option::modal::no": "no, no estoy seguro."
+    }
+  },
+
+  "NewBookForm": {
+    "title::form": "¡Añadiendo nuevo libro!",
+    "button::addNewBook": "Agregar nuevo libro",
+    "label::book::title": "Título del libro",
+    "placeholder::book::title": "agregar nombre del libro...",
+    "label::book::author": "Nombre del autor",
+    "placeholder::book::author": "escribe el nombre del autor",
+    "label::book::releaseDate": "Fecha de lanzamiento",
+    "label::book::addTags": "¡Agregar etiquetas!",
+    "placeholder::book::addTags": "escribe las etiquetas separadas por espacio...",
+    "label::book::cover": "Portada del libro",
+    "label::book::file": "Archivo del libro",
+    "button::form::addToLibrary": "¡Añadir a la biblioteca!"
+  },
+
+  "LibraryFilters": {
+    "title::view::grid": "Muestra los libros como tarjetas grandes",
+    "title::view::list": "Muestra los libros como una lista",
+    "title::view::listIcons": "Muestra los libros como una lista, pero con la portada de los libros",
+    "title::order::ascendent": "Muestra los libros de la A a la Z alfabéticamente",
+    "title::order::decrescent": "Muestra los libros de la Z a la A alfabéticamente",
+    "title::order::favorites": "Muestra los libros de favoritos primero",
+    "title::order::tag": "Muestra los libros que tienen las etiquetas especificadas",
+    "placeholder::search::order::tag": "Buscar por etiqueta...",
+    "message::cantFind::order::tag": "No se puede encontrar la etiqueta {value}"
+  },
+
+  "Listview": {
+    "title::cover": "Portada",
+    "title::bookTitle": "Título del libro",
+    "title::releaseDate": "Fecha de lanzamiento",
+    "title::author": "Autor"
+  },
+
+  "PdfViewer": {
+    "Dock": {
+      "pagesView": "{current} de {total} páginas",
+      "button::library": "Biblioteca",
+      "button::previous": "Anterior",
+      "button::next": "Siguiente",
+      "title::scale": "Escala",
+      "title::theme": "tema",
+      "title::draw": "Dibujar"
+    },
+    "AnnotationDock": {
+      "title::pencil": "Lápiz",
+      "title::marker": "Marcador",
+      "title::triangle": "Triángulo",
+      "title::rectangle": "Rectángulo",
+      "title::circle": "Círculo",
+      "title::arrow": "Flecha",
+      "title::eraser": "Borrador",
+      "title::clearCanvas": "Borrar anotaciones",
+      "title::opacity": "Opacidad",
+      "title::color": "Color"
+    }
+  },
+
+  "Notifications": {
+    "LibraryRefreshed": {}
+  }
+}
