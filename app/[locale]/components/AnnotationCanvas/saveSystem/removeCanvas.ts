@@ -19,7 +19,7 @@ export const removeCanvas = (bookIndex: number, currentPage: number) => {
     );
 
     localStorage.setItem("dataMap", JSON.stringify(dataMap));
-    setDataMapIfExistsInCloud("dataMap", identifierCode);
+    setDataMapIfExistsInCloud("metadata.json", identifierCode);
   } catch (e) {
     console.error(e);
   }

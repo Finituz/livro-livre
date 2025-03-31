@@ -38,6 +38,9 @@ export default function Home() {
         <LastOpenedBook />
       </main>
       <footer className="fixed z-10 bottom-5 bg-[rgba(0,0,0,0.5)] backdrop-blur-md p-10 w-[95vw] flex self-end gap-6 flex-wrap items-center justify-center border rounded-2xl left-1/2 transform -translate-x-1/2">
+        <b className="absolute bottom-2 left-4 text-sm opacity-60 ">
+          public-beta-v1.0
+        </b>
         <span>
           <b>{"Livro Livre@2025"}</b>
         </span>
