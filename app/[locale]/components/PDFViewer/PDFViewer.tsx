@@ -121,7 +121,7 @@ export default function PdfJs({
   return (
     <div
       ref={bodyRef}
-      className="py-24 relative flex flex-col w-full h-full items-center justify-center "
+      className="py-24 relative flex flex-col w-full h-full items-center justify-center"
     >
       <div className="overflow-scroll">
         <canvas ref={canvasRef} className="px-10 md:p-0"></canvas>

@@ -59,7 +59,11 @@ export default function AnnotationDock({
   };
 
   useEffect(() => {
-    dockRef.current?.classList.toggle("translate-x-52");
+    if (showAnnotation == true) {
+      dockRef.current?.classList.remove("translate-x-52");
+    } else {
+      dockRef.current?.classList.add("translate-x-52");
+    }
 
     setCurrentTool();
   }, [showAnnotation]);
