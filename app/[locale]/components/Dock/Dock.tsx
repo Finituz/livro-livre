@@ -140,7 +140,10 @@ export default function Dock({
           className="group relative flex text-center cursor-pointer disabled:text-gray-700 items-center justify-center rounded-full"
         >
           <b>{"aA"}</b>
-          <div className="absolute hidden group-focus:flex bottom-10 bg-[rgba(0,0,0,0.5)] backdrop-blur-md p-3 rounded-xl">
+          <div
+            onClick={(e) => e.currentTarget.focus()}
+            className="absolute hidden group-focus:flex bottom-10 bg-[rgba(0,0,0,0.5)] backdrop-blur-md p-3 rounded-xl"
+          >
             <ul ref={scaleListRef}>
               <li className="rounded-lg px-2" onClick={changeScale}>
                 0.5
