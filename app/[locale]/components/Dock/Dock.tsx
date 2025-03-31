@@ -137,6 +137,7 @@ export default function Dock({
         </button>
         <button
           title={t("title::scale")}
+          onClick={(e) => e.currentTarget.focus()}
           className="group relative flex text-center cursor-pointer disabled:text-gray-700 items-center justify-center rounded-full"
         >
           <b>{"aA"}</b>
