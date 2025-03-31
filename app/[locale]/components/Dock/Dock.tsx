@@ -102,6 +102,8 @@ export default function Dock({
     scaleMark();
 
     localStorage.setItem("dataMap", JSON.stringify(dataMap));
+
+    document.location.reload();
   };
 
   useEffect(() => {
@@ -117,7 +119,7 @@ export default function Dock({
           className="flex font-bold md:gap-5 cursor-pointer flex-col md:flex-row disabled:cursor-default disabled:text-gray-500 rounded-full items-center justify-center"
         >
           <RiHome8Line className="text-2xl text-center" />
-          <b>{t("button::library")}</b>
+          <b className="hidden md:block">{t("button::library")}</b>
         </a>
         <button
           className="flex font-bold cursor-pointer disabled:cursor-default disabled:text-gray-500 rounded-full items-center justify-center"
@@ -125,14 +127,14 @@ export default function Dock({
           disabled={currentPage <= 1}
         >
           <RiArrowLeftSLine className="text-3xl" />
-          &nbsp;{t("button::previous")}
+          <b className="hidden md:block">&nbsp;{t("button::previous")}</b>
         </button>
         <button
           className="flex font-bold text-center cursor-pointer disabled:text-gray-700 items-center justify-center rounded-full"
           onClick={nextPage}
           disabled={currentPage >= (pdfDoc?.numPages ?? -1)}
         >
-          {t("button::next")}&nbsp;
+          <b className="hidden md:block">{t("button::next")}&nbsp;</b>
           <RiArrowRightSLine className="text-3xl" />
         </button>
         <button
