@@ -1,6 +1,10 @@
 {
   "Header": {
-    "select::languages": { "en": "Inglés", "br": "Portugués", "es": "Español" },
+    "select::languages": {
+      "en-US": "Inglés",
+      "pt-BR": "Portugués",
+      "es-AR": "Español"
+    },
     "text::library": "Biblioteca",
     "placeholder::search": "Buscar libro...",
     "title::syncLibrary": "Sincronizar biblioteca",
