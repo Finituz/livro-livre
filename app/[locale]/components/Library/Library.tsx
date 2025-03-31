@@ -166,7 +166,7 @@ export default function Library({
       : "flex flex-col mt-10 p-4 gap-2";
 
   return (
-    <div className="w-full p-4 md:pr-20">
+    <div className="flex flex-col items-center justify-center w-full p-4 md:pr-20">
       {session ? (
         <LibraryFilters
           setTagFilter={setTagFilter}

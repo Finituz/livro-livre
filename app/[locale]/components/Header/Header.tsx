@@ -85,7 +85,9 @@ export default function Header({
                 className="w-full"
                 placeholder={t("placeholder::search")}
               />
-              <b className="hidden md:show text-gray-400">{"ctrl+/"}</b>
+              <b className="opacity-0 md:opacity-100 text-gray-400">
+                {"ctrl+/"}
+              </b>
             </span>
           )}
           <RiMenuLine
@@ -95,7 +97,7 @@ export default function Header({
           <div
             ref={mobileRef}
             onClick={() => mobileRef.current?.classList.toggle("hidden")}
-            className="hidden bg-[rgba(0,0,0,0.5)] md:z-1 md:bg-transparent md:backdrop-blur-none md:flex-row md:flex backdrop-blur-md flex-col-reverse fixed z-5 top-0 left-0 right-0 bottom-0 md:static font-bold cursor-pointer items-center justify-center gap-10"
+            className="hidden bg-[rgba(0,0,0,0.5)] md:z-1 md:bg-transparent md:backdrop-blur-none md:flex-row md:flex backdrop-blur-md flex-col-reverse fixed z-12 top-0 left-0 right-0 bottom-0 md:static font-bold cursor-pointer items-center justify-center gap-10"
           >
             <div className="md:flex mt-32 md:mt-0">
               <button

@@ -128,14 +128,15 @@ export default function BaseView({
         {showTools && (
           <div
             className={
-              "flex flex-col gap-2 absolute bottom-2 right-1 " + toolsClassName
+              "md:opacity-0 group-hover:opacity-100 duration-500 hover:scale-105 transition-all flex flex-col gap-2 absolute bottom-2 right-1 " +
+              toolsClassName
             }
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={setAsFavorite}
               ref={favoriteButtonRef}
-              className="opacity-0 z-2 border-2 border-white group-hover:opacity-100 cursor-pointer duration-500 hover:scale-105 transition-all bg-red-900 rounded-xl p-2"
+              className="z-2 border-2 border-white cursor-pointer  bg-red-900 rounded-xl p-2"
             >
               {favorite == true ? (
                 <RiStarFill title={t("message::favorite")} />
@@ -147,14 +148,14 @@ export default function BaseView({
               ref={downloadButtonRef}
               title={t("message::download")}
               onClick={() => downloadBook()}
-              className="opacity-0 z-2 border-2 border-white group-hover:opacity-100 cursor-pointer duration-500 hover:scale-105 transition-all bg-red-900 rounded-xl p-2"
+              className="z-2 border-2 border-white cursor-pointer bg-red-900 rounded-xl p-2"
             >
               <RiDownloadCloudLine />
             </button>
             <button
               ref={deleteBookButtonRef}
               title={t("Delete.message::delete")}
-              className="opacity-0 z-2 border-2 border-white group-hover:opacity-100 cursor-pointer duration-500 hover:scale-105 transition-all bg-red-900 rounded-xl p-2"
+              className="z-2 border-2 border-white cursor-pointer bg-red-900 rounded-xl p-2"
             >
               <RiDeleteBin7Line />
             </button>
